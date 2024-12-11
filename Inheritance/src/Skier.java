@@ -19,4 +19,7 @@ public class Skier extends Sportsman{
         return super.getInfo() + String.format(" дистанция - %d ", getDistance());
     }
 
+    public String getMainSkiEquipment(){
+        return "Лыжи";
+    }
 }
