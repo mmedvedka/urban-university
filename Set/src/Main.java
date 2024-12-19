@@ -53,15 +53,11 @@ public class Main {
             }
 
             System.out.println("больше 15 и являются четными:");
-            for (Integer element: setNumbers1){
-                System.out.println(element);
-            }
+            System.out.println(setNumbers1);
 
             System.out.println("остальные поделенные на 2:");
-            for (Integer element: setNumbers2){
-                System.out.println(element);
-            }
-        }
+            System.out.println(setNumbers2);
+         }
 
     }
 }
