@@ -36,14 +36,31 @@ public class Main {
             //  2.
             System.out.println("2.");
 
-            Integer[] numbers = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
-            HashSet<Integer> set = new HashSet<>();
+            Integer[] numbers = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24};
+            TreeSet<Integer> setNumbers1 = new TreeSet<>();
+            TreeSet<Integer> setNumbers2 = new TreeSet<>();
 
             for(Integer num: numbers){
-                set.add(num);
+                if ((num > 15) && (num % 2 == 0)){
+                    setNumbers1.add(num);
+                }
             }
 
-            System.out.println("Common elements of set1 and set2: "+GetCommonElements (set1, set2));
+            for(Integer num: numbers){
+                if (!((num > 15) && (num % 2 == 0))){
+                    setNumbers2.add(num / 2);
+                }
+            }
+
+            System.out.println("больше 15 и являются четными:");
+            for (Integer element: setNumbers1){
+                System.out.println(element);
+            }
+
+            System.out.println("остальные поделенные на 2:");
+            for (Integer element: setNumbers2){
+                System.out.println(element);
+            }
         }
 
     }
