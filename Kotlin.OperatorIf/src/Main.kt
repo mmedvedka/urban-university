@@ -1,5 +1,67 @@
 import kotlin.*
 
+fun GetNameOfDay (numDay: Int) : String {
+    var result: String = ""
+    if (numDay == 1) {
+        result = "«понедельник»"
+    }
+    else if (numDay == 2) {
+        result = "«вторник»"
+    }
+    else if (numDay == 3) {
+        result = "«среда»"
+    }
+    else if (numDay == 4) {
+        result = "«четверг»"
+    }
+    else if (numDay == 5) {
+        result = "«пятница»"
+    }
+    else if (numDay == 6) {
+        result = "«суббота»"
+    }
+    else if (numDay == 7){
+        result = "«воскресенье»"
+    }
+    return result
+}
+
+fun GetOperationResult(a: Int, b: Int, op: Int): Int{
+    var result = 0;
+    if (op == 1){
+        result = a + b
+    }
+    else if (op == 2){
+        result = a + b
+    }
+    else if (op == 3){
+        result = a * b
+    }
+    else if (op == 4){
+        result = a / b
+    }
+    return result
+}
+
+fun GetGradeName (numGrade: Int): String{
+    var result: String = ""
+    if (numGrade == 1) {
+        result = "«плохо»"
+    }
+    else if (numGrade == 2) {
+        result = "«неудовлетворительно»"
+    }
+    else if (numGrade == 3) {
+        result = "«удовлетворительно»"
+    }
+    else if (numGrade == 4) {
+        result = "«хорошо»"
+    }
+    else if (numGrade == 5) {
+        result = "«отлично»"
+    }
+    return result
+}
 
 fun main() {
 /**TODO
@@ -37,74 +99,20 @@ fun main() {
     println("3. result of max = $resMax")
 
     //  4.
-    val numDay = 4;
-    if (numDay == 1) {
-        println("4. $numDay - «понедельник»")
-    }
-    else
-    if (numDay == 2) {
-        println("4. $numDay - «вторник»")
-    }
-    else
-    if (numDay == 3) {
-        println("4. $numDay - «среда»")
-    }
-    else
-    if (numDay == 4) {
-        println("4. $numDay - «четверг»")
-    }
-    else
-    if (numDay == 5) {
-        println("4. $numDay - «пятница»")
-    }
-    else
-    if (numDay == 6) {
-        println("4. $numDay - «суббота»")
-    }
-    else {
-        println("4. $numDay - «воскресенье»")
-    }
+    var numDay = 3;
+    println("4. $numDay -> "+GetNameOfDay(numDay))
+    numDay = 5;
+    println("4. $numDay -> "+GetNameOfDay(numDay))
 
     //  5.
-    val K = 5;
-    if (K == 1) {
-        println("5. $K - «плохо»")
-    }
-    else
-    if (K == 2) {
-        println("5. $K - «неудовлетворительно»")
-    }
-    else
-    if (K == 3) {
-        println("5. $K - «удовлетворительно»")
-    }
-    else
-    if (K == 4) {
-        println("5. $K - «хорошо»")
-    }
-    else
-    {
-        println("5. $K - «отлично»")
-    }
+    var K = 3;
+    println("5. $K -> "+GetGradeName(K))
+    K = 4;
+    println("5. $K -> "+GetGradeName(K))
 
-    val op = 2
-    val a = 10
-    val b = 5
-    val result = 0;
-    if (op == 1){
-       result = a + b
-    }
-    else
-    if (op == 2){
-       result = a + b
-    }
-    else
-    if (op == 3){
-       result = a * b
-    }
-    else
-    if (op == 4){
-       result = a / b
-    }
-    println("6. $op - result $result")
+    //  6.
+    var op = 2
+    println("6. $op -> "+GetOperationResult(10, 5, op))
+    op = 3
+    println("6. $op -> "+GetOperationResult(10, 5, op))
 }
