@@ -9,8 +9,8 @@ class Car (val weight: Int, var speed: Int) {
 
     override fun toString(): String {
         var result = when {
-            this.speed == 0 -> "Car stopped: weight = "+this.weight.toString() +" speed = " + this.speed.toString()
-            this.speed > 0 -> "Car drive: weight = "+this.weight.toString() +" speed = " + this.speed.toString()
+            this.speed == 0 -> "Car stopped: weight = ${this.weight} speed = ${this.speed}"
+            this.speed > 0 -> "Car drive: weight =  = ${this.weight} speed = ${this.speed}"
             else -> ""
         }
         return result
