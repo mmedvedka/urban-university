@@ -48,10 +48,7 @@ class Seasons {
     }
 
     private fun checkMonthName(monthName: String): Boolean {
-       if ( months.contains(monthName.uppercase()) )
-          return true
-       else
-          return false
+       return months.contains(monthName.uppercase())
     }
 
     fun getSeasonName(monthName: String): String {
